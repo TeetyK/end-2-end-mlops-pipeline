@@ -26,6 +26,11 @@ def preprocess_data():
 
     joblib.dump(preprocessor,'.\\models\\transformers\\preprocessor.joblib')
     joblib.dump(le,'.\\models\\transformers\\label_encoder.joblib')
+    
+    X_processed = preprocessor.transform(X)
+    y_encoded = le.transform(y)
 
-if __name__ == "__main__":
-    preprocess_data()
+    return X_processed , y_encoded
+
+# if __name__ == "__main__":
+#     preprocess_data()
