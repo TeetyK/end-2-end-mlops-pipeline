@@ -1,0 +1,11 @@
+stages:
+  build_docker_image:
+    cmd: docker build -t student-risk-api .
+    deps:
+      - Dockerfile
+      - requirements.txt
+      - app.py
+      - models/tuned_models/best_model-RandomForest.joblib
+  
+  run_docker_container:
+    cmd: docker run --rm -p 8000:8000 student-risk-api
