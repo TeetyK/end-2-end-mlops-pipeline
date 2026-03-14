@@ -28,5 +28,5 @@ def tune_hyperparameters(X_train , y_train):
         best_model = random_search.best_estimator_
 
         mlflow.sklearn.log_model(best_model,"RandomForest_best")
-        joblib.dump(best_model,'.\\models\\best_model.joblib')
+        joblib.dump(best_model,'.\\models\\tuned_models\\best_model.joblib')
         print(f"Best Parameters : {random_search.best_params_}")
