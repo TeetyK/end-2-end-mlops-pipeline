@@ -26,3 +26,11 @@ running train_model
 ```bash
 uv run main.py
 ```
+deployment with fastapi
+```bash
+uv run app.py
+```
+test api 
+```bash
+uv run test_api.py
+```
