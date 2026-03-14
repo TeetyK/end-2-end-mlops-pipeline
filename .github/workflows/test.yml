@@ -1,0 +1,12 @@
+name: CI using CML
+
+on:
+  push
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
